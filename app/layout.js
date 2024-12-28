@@ -37,9 +37,9 @@ export const metadata = {
     siteName: "Next.js",
     images: [
       {
-        url: "https://nextjs.org/og.png",
-        width: 800,
-        height: 600,
+        url: "https://raw.githubusercontent.com/AmitDeka/amit-portfolio/refs/heads/main/public/home.png",
+        width: 1200,
+        height: 628,
       },
     ],
     locale: "en_US",
@@ -54,8 +54,8 @@ export const metadata = {
     creator: "@nextjs",
     creatorId: "1467726470533754880",
     images: {
-      url: "https://nextjs.org/og.png",
-      alt: "Next.js Logo",
+      url: "https://raw.githubusercontent.com/AmitDeka/amit-portfolio/refs/heads/main/public/home.png",
+      alt: "Portfolio Home",
     },
     app: {
       name: "twitter_app",
