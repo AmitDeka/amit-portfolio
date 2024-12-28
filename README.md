@@ -126,8 +126,6 @@ If you would like to contribute to this project:
 
 This project is licensed under the **MIT License**.
 
----
-
 ## Acknowledgments
 
 - **ShadCN UI**: For providing UI components used in this form.
