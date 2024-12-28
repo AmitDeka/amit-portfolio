@@ -31,7 +31,7 @@ export function HeroOrbitingCircles() {
     { icon: Icons.figma, radius: 130, duration: 40, delay: 30, reverse: false },
   ];
   return (
-    <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[350px] lg:h-[400px] w-full flex-col items-center justify-center overflow-hidden">
       {orbitingIcons.map(
         ({ icon: Icon, radius, duration, delay, reverse }, index) => (
           <OrbitingCircles

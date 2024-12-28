@@ -1,12 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { FileText, Github, Linkedin, Mail, Menu } from "lucide-react";
-
 import { cn } from "@/lib/utils";
-
 import { Button, buttonVariants } from "@/components/ui/button";
-
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -21,7 +22,7 @@ const navbarItems = [
   },
   {
     name: "About",
-    href: "/",
+    href: "/#about",
   },
   {
     name: "Projects",
@@ -33,11 +34,13 @@ const navbarItems = [
   },
   {
     name: "Contact",
-    href: "/",
+    href: "/#contact",
   },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <div className="mx-4 mt-4 sticky top-4 z-50">
       <div className="container border mx-auto max-w-screen-lg px-2 py-2 rounded-full font-lato bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-foreground/10 dark:border-foreground/20 ">
@@ -53,12 +56,20 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2">
             {navbarItems.map((item, index) => (
-              <Button
+              <Link
                 key={index}
-                variant="ghost"
-                className="text-foreground/70 text-base">
-                <Link href={item.href}>{item.name}</Link>
-              </Button>
+                href={item.href}
+                className={cn(
+                  "text-foreground/70 text-base",
+                  buttonVariants({
+                    variant: "ghost",
+                  })
+                )}>
+                {/* {pathname === item.href && (
+                  <div className="h-2 w-2 rounded-full top-[43%] left-0 absolute bg-primary"></div>
+                )} */}
+                {item.name}
+              </Link>
             ))}
           </div>
           <div className="flex items-center gap-1">
@@ -96,38 +107,49 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="size-4" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>
-                    <div className="flex items-center gap-2">
-                      <div className="h-12 w-12 bg-primary text-white rounded-full flex justify-center items-center">
-                        <Link
-                          href="/"
-                          className="text-xl font-semibold font-playfairD">
-                          AD
-                        </Link>
+            <div>
+              <ThemeToggle />
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent className="overflow-y-auto">
+                  <SheetHeader>
+                    <SheetTitle>
+                      <div className="flex items-center gap-2">
+                        <div className="h-12 w-12 bg-primary text-white rounded-full flex justify-center items-center">
+                          <Link
+                            href="/"
+                            className="text-xl font-semibold font-playfairD">
+                            AD
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="mb-8 mt-8 flex flex-col gap-4">
-                  {navbarItems.map((item, index) => (
-                    <Button
-                      key={index}
-                      variant="ghost"
-                      className="text-foreground/70 text-base justify-start">
-                      <Link href={item.href}>{item.name}</Link>
-                    </Button>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
+                    </SheetTitle>
+                    <SheetDescription>
+                      <p className="sr-only">Navigation menu</p>
+                    </SheetDescription>
+                  </SheetHeader>
+                  <div className="mb-4 mt-4 flex flex-col gap-4">
+                    {navbarItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        className={cn(
+                          "text-foreground/70 ps-0 text-base !justify-start",
+                          buttonVariants({
+                            variant: "ghost",
+                          })
+                        )}
+                        href={item.href}>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>

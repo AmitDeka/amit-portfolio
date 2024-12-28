@@ -61,7 +61,9 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="pt-20 pb-12">
+    <section
+      className="pt-16 md:pt-20 lg:pt-24 pb-12 md:pb-14 lg:pb-16"
+      id="contact">
       <div className="container mx-auto px-4">
         <div className="flex w-full flex-col items-center">
           <div className="flex flex-col items-center space-y-4 text-center sm:space-y-6 md:max-w-3xl md:text-center">
