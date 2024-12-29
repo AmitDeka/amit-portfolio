@@ -48,7 +48,7 @@ export default async function handler(req, res) {
       });
 
       await transporter.sendMail({
-        from: process.env.SMTP_USER,
+        from: `Amit Deka <${process.env.SMTP_USER}>`,
         to: "amitdeka49@gmail.com",
         subject: "New Contact Form Submission",
         html: `<p><strong>Name:</strong> ${name}</p>
