@@ -40,7 +40,7 @@ export default async function handler(req, res) {
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: process.env.SMTP_PORT,
-        secure: true, // Use `true` for port 465, `false` for other ports
+        secure: true,
         auth: {
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASSWORD,
@@ -50,6 +50,7 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         from: `Amit Deka <${process.env.SMTP_USER}>`,
         to: "amitdeka49@gmail.com",
+        cc: `${email}`,
         subject: "New Contact Form Submission",
         html: `<p><strong>Name:</strong> ${name}</p>
                <p><strong>Email:</strong> ${email}</p>
