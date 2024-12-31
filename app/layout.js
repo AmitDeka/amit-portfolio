@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "./utils/theme-provider";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-serif",
@@ -75,6 +76,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning="true" className="scroll-smooth">
+      <GoogleAnalytics gaId="G-DGCP7WB1DX" />
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
         suppressHydrationWarning="true">
