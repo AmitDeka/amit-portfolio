@@ -21,55 +21,54 @@ const lato = Lato({
 
 export const metadata = {
   title: {
-    template: "%s | Amit Deka",
-    default: "Amit Deka",
+    template: "%s | Amit Deka - Web Developer & Designer",
+    default: "Amit Deka - Web Developer & Designer",
   },
   description:
-    "Hi, I am Amit Deka a Web Developer, Android Developer, UI/UX Designer. I am freelance Web Developer specialized in both front-end and back-end.",
-  keywords: ["Next.js", "React", "JavaScript"],
-  authors: [{ name: "Amit Deka", url: "https://nextjs.org" }],
+    "Discover Amit Deka's portfolio - a skilled Web Developer and UI/UX Designer. Specializing in front-end and back-end development, offering creative and functional web solutions.",
+  keywords: [
+    "Web Developer",
+    "UI/UX Designer",
+    "Full-Stack Developer",
+    "Next.js Portfolio",
+    "React Developer",
+    "Freelance Developer",
+    "Web Design",
+    "JavaScript Development",
+  ],
+  authors: [{ name: "Amit Deka", url: "https://www.amitdeka.work" }],
   creator: "Amit Deka",
   publisher: "Amit Deka",
   openGraph: {
-    title: "Amit Deka",
+    title: "Amit Deka - Web Developer & Designer",
     description:
-      "Hi, I am Amit Deka a Web Developer, Android Developer, UI/UX Designer. I am freelance Web Developer specialized in both front-end and back-end.",
-    url: "https://nextjs.org",
-    siteName: "Next.js",
+      "Explore the portfolio of Amit Deka, a versatile Web Developer and UI/UX Designer. Crafting user-friendly, efficient, and creative solutions for the web.",
+    url: "https://www.amitdeka.work",
+    siteName: "Amit Deka Portfolio",
     images: [
       {
         url: "https://raw.githubusercontent.com/AmitDeka/amit-portfolio/refs/heads/main/public/home.png",
         width: 1200,
         height: 628,
+        alt: "Amit Deka Portfolio Preview",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "app",
-    title: "Amit Deka",
+    card: "summary_large_image",
+    title: "Amit Deka - Web Developer & Designer",
     description:
-      "Hi, I am Amit Deka a Web Developer, Android Developer, UI/UX Designer. I am freelance Web Developer specialized in both front-end and back-end.",
-    siteId: "1467726470533754880",
-    creator: "@nextjs",
-    creatorId: "1467726470533754880",
-    images: {
-      url: "https://raw.githubusercontent.com/AmitDeka/amit-portfolio/refs/heads/main/public/home.png",
-      alt: "Portfolio Home",
-    },
-    app: {
-      name: "twitter_app",
-      id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
+      "Visit Amit Deka's portfolio to explore innovative web solutions, UI/UX designs, and expertise in Android development.",
+    site: "@AmitDeka10",
+    creator: "@AmitDeka10",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/AmitDeka/amit-portfolio/refs/heads/main/public/home.png",
+        alt: "Amit Deka Portfolio Preview",
       },
-      url: {
-        iphone: "https://iphone_url",
-        ipad: "https://ipad_url",
-      },
-    },
+    ],
   },
 };
 
