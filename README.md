@@ -1,135 +1,47 @@
-# Contact Form Component with API Integration
+# Hi 👋 My name is Amit Deka
 
-This is a **Contact Form** component designed for my portfolio website. It is built with **React** and uses **ShadCN UI** components for styling and **Toast Notifications** for feedback. The form collects a user's name, email, and message, which are then sent to a backend API for processing. The form also integrates with **Hygraph (GraphCMS)** for storing submissions and **Nodemailer** to send email notifications.
+## Front End Web Developer
 
-## Features
+An IT Student from India, Technology Enthusiast & an addicted Web Developer.
 
-- **Contact Form**: Collects the user's name, email, and message.
-- **API Integration**: Form submissions are processed by an API endpoint.
-- **Toast Notifications**: Success and error feedback displayed using ShadCN Toast.
-- **Email Notifications**: Sends a notification email upon successful form submission.
-- **Responsive Design**: Mobile-friendly form layout.
+- 🌍  I'm based in Assam
+- 🖥️  See my portfolio at [Website](https://www.amitdeka.work/)
+- ✉️  You can contact me at [amitdeka13@gmail.com](mailto:amitdeka13@gmail.com)
+- 🧠  I'm learning React JS
+- ⚡  An apple, potato, and onion all taste the same if you eat them with your nose plugged.
+  amitdeka.work
+  [![Website](https://img.shields.io/website?down_color=red&down_message=Down&label=amitdeka.work&style=for-the-badge&up_color=green&up_message=UP&url=https%3A%2F%2Famitdeka.work%2F)](https://www.amitdeka.work/)
 
-## Technologies Used
+<a href="https://www.twitter.com/AmitDeka10" target="_blank" rel="noreferrer"><img
+src="https://img.shields.io/twitter/follow/AmitDeka10?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"
+/></a><a href="https://www.github.com/AmitDeka" target="_blank" rel="noreferrer"><img
+src="https://img.shields.io/github/followers/AmitDeka?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" /></a>
 
-- **React**: Frontend framework.
-- **ShadCN UI**: UI components for the form and toast notifications.
-- **GraphQL**: Used for submitting form data to Hygraph (GraphCMS).
-- **Node.js**: Backend for processing form data.
-- **Nodemailer**: Sends email notifications upon form submission.
+### Skills
 
-## Installation
+<p align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://jquery.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/jquery-colored.svg" width="36" height="36" alt="JQuery" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="Sass" /></a>
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" /></a>
+<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
+<a href="https://www.heroku.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg" width="36" height="36" alt="Heroku" /></a>
+<a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored.svg" width="36" height="36" alt="Express" /></a>
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
+<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a>
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" /></a>
+<a href="https://www.adobe.com/uk/products/xd.html" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/xd-colored.svg" width="36" height="36" alt="XD" /></a>
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
+</p>
 
-To integrate this contact form into your project, follow these steps:
+### Socials
 
-1. Clone the repository:
+<p align="left"> <a href="https://www.github.com/AmitDeka" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/amit-deka" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> <a href="https://www.stackoverflow.com/users/12417834/amit-deka" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/stackoverflow.svg" width="32" height="32" /></a> <a href="https://www.twitter.com/AmitDeka10" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a></p>
 
-   ```bash
-   git clone https://github.com/your-username/contact-form.git
-   cd contact-form
-   ```
+### Support Me
 
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Set up environment variables by creating a `.env.local` file in the root directory:
-
-   ```env
-   HYGRAPH_API_TOKEN=your-hygraph-api-token
-   SMTP_HOST=your-smtp-host
-   SMTP_PORT=your-smtp-port
-   SMTP_USER=your-smtp-username
-   SMTP_PASSWORD=your-smtp-password
-   ```
-
-4. Run the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open your browser at `http://localhost:3000`.
-
-## Folder Structure
-
-```plaintext
-├── components/
-│   ├── ContactMe.jsx    // Contact form component
-│   ├── ui/              // ShadCN UI components (Input, Button, Label, etc.)
-├── pages/
-│   ├── api/
-│   │   ├── contact.js   // API handler for form submissions
-├── .env.local           // Environment variables (not included in the repo)
-├── README.md            // Project documentation
-```
-
-## Usage
-
-### Contact Form
-
-- The form collects the user’s name, email, and message, and sends this data to a backend API.
-
-### API Handler
-
-- The API endpoint `pages/api/contact.js` handles the form data, saves it to **Hygraph** (GraphCMS), and sends an email notification using **Nodemailer**.
-
-### Toast Notifications
-
-- Upon submission, a toast notification displays a success or error message, notifying the user of the form submission status.
-
-## Customization
-
-- **API Integration**: Modify the `pages/api/contact.js` file to integrate with a different backend or service.
-- **Toast Feedback**: Customize the success or error messages shown in the toast notifications.
-
-## Deployment
-
-Once ready for production, you can build and deploy your application:
-
-1. Build the application for production:
-
-   ```bash
-   npm run build
-   ```
-
-2. Start the production server:
-
-   ```bash
-   npm start
-   ```
-
-3. Deploy to platforms like **Vercel**, **Netlify**, or **AWS**.
-
-## Contributing
-
-If you would like to contribute to this project:
-
-1. Fork the repository.
-2. Create a new branch for your feature:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push to your fork:
-   ```bash
-   git push origin feature-name
-   ```
-5. Create a pull request.
-
-## License
-
-This project is licensed under the **MIT License**.
-
-## Acknowledgments
-
-- **ShadCN UI**: For providing UI components used in this form.
-- **GraphQL Request**: For easy integration with Hygraph.
-- **Nodemailer**: For sending email notifications on form submissions.
-
-For more information or issues, feel free to reach out. 🚀
+<a href="https://www.buymeacoffee.com/AmitDeka10"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200" /></a>
