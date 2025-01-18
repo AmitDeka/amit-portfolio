@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "blog.amitdeka.work" }], // Check for the blog subdomain
+        destination: "/blog/:path*", // Route to the /blog folder
+      },
+    ];
+  },
 };
 
 export default nextConfig;
