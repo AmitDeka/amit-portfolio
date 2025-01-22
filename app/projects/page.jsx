@@ -118,22 +118,22 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="flex space-x-2 px-4 pb-4">
-                      {project.projectSource && (
+                      {project.sourceCode && (
                         <Button className="shadow-none">
                           <Link
                             className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                            href={project.projectSource}
+                            href={project.sourceCode}
                             target="_blank">
                             <Github className="mr-1" />
                             Source
                           </Link>
                         </Button>
                       )}
-                      {project.projectWebsite && (
+                      {project.websiteLink && (
                         <Button className="shadow-none">
                           <Link
                             className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                            href={project.projectWebsite}
+                            href={project.websiteLink}
                             target="_blank">
                             <Globe2 className="mr-1" />
                             Website
