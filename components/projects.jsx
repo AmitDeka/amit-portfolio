@@ -29,10 +29,8 @@ const Projects = () => {
             title
             description
             tags
-            link {
-              projectSource
-              projectWebsite
-            }
+            sourceCode
+            websiteLink
           }
         }
       `;
@@ -118,22 +116,22 @@ const Projects = () => {
                     ))}
                   </div>
                   <div className="flex space-x-2 px-4 pb-4">
-                    {project.link.projectSource && (
+                    {project.projectSource && (
                       <Button className="shadow-none">
                         <Link
                           className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                          href={project.link.projectSource}
+                          href={project.projectSource}
                           target="_blank">
                           <Github className="mr-1" />
                           Source
                         </Link>
                       </Button>
                     )}
-                    {project.link.projectWebsite && (
+                    {project.projectWebsite && (
                       <Button className="shadow-none">
                         <Link
                           className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                          href={project.link.projectWebsite}
+                          href={project.projectWebsite}
                           target="_blank">
                           <Globe2 className="mr-1" />
                           Website
