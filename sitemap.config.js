@@ -3,6 +3,6 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: "monthly",
   priority: 1,
-  sitemapSize: 5000,
+  sitemapSize: 500,
   exclude: ["/api/*"],
 };

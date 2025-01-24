@@ -55,14 +55,6 @@ async function BlogPost({ params }) {
   const blog = data.blogs[0];
   return (
     <main>
-      <style>
-        {`
-          a {
-            color: hsl(var(--primary));
-            text-decoration: none;
-          }
-        `}
-      </style>
       <section className="py-12 min-h-screen">
         <div className="container mx-auto px-4 max-w-screen-lg">
           <div className="grid gap-y-6">
@@ -111,7 +103,7 @@ async function BlogPost({ params }) {
             </div>
 
             <div
-              className="grid gap-y-4"
+              className="grid gap-y-3 prose prose-sm max-w-none"
               dangerouslySetInnerHTML={{ __html: blog.content.html }}
             />
           </div>

@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.amitdeka.work
-
-# Sitemaps
-Sitemap: https://www.amitdeka.work/sitemap.xml
