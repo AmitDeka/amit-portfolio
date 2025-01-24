@@ -30,7 +30,7 @@ const navbarItems = [
   },
   {
     name: "Blog",
-    href: "/",
+    href: "/blog",
   },
   {
     name: "Contact",
@@ -137,7 +137,7 @@ const Navbar = () => {
                       <Link
                         key={index}
                         className={cn(
-                          "text-foreground/70 ps-0 text-base !justify-start",
+                          "text-foreground/70 ps-4 text-base !justify-start",
                           buttonVariants({
                             variant: "ghost",
                           })
