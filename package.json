@@ -29,12 +29,12 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "22.10.2",
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "22.10.10",
     "@types/react": "19.0.2",
-    "eslint": "^9",
+    "eslint": "^9.18.0",
     "eslint-config-next": "15.1.2",
-    "postcss": "^8",
+    "postcss": "^8.5.1",
     "tailwindcss": "^3.4.1",
     "typescript": "5.7.2"
   }

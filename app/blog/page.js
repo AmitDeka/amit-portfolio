@@ -1,6 +1,6 @@
 "use client";
 import { gql, GraphQLClient } from "graphql-request";
-import { ArrowRight, Github, Globe2 } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,17 +8,15 @@ import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { MagicCard } from "@/components/ui/magic-card";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
   useEffect(() => {
     const fetchAllBlogs = async () => {
@@ -55,6 +53,21 @@ const Blogs = () => {
 
   const { theme } = useTheme();
 
+  const totalPages = Math.ceil(allBlogs.length / itemsPerPage);
+
+  const currentBlogs = allBlogs.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (direction) => {
+    setCurrentPage((prevPage) =>
+      direction === "next"
+        ? Math.min(prevPage + 1, totalPages)
+        : Math.max(prevPage - 1, 1)
+    );
+  };
+
   return (
     <main>
       <section className="py-16 min-h-[calc(100dvh-100px)]">
@@ -62,40 +75,39 @@ const Blogs = () => {
           <div className="flex w-full flex-col items-center">
             <div className="flex flex-col items-center space-y-4 text-center sm:space-y-6 md:max-w-3xl md:text-center">
               <h2 className="text-3xl font-semibold font-playfairD md:text-4xl lg:text-5xl">
-                Explore My Blogs
+                Discover Insights & Innovations
               </h2>
 
               <p className="text-muted-foreground font-lato text-lg md:max-w-2xl">
-                A showcase of impactful creations merging innovation, design,
-                and functionality.
+                Explore a curated collection of articles spanning web
+                development, design, technology, and programming.
               </p>
             </div>
           </div>
           <div className="mx-auto mt-8 grid max-w-screen-lg gap-4 md:grid-cols-2">
             {isLoading
-              ? Array.from({ length: 6 }).map((_, index) => (
+              ? Array.from({ length: itemsPerPage }).map((_, index) => (
                   <Card
                     key={index}
                     className="grid rounded bg-background shadow-none">
                     <div className="w-full h-56 rounded overflow-hidden">
                       <Skeleton className="w-full h-full" />
                     </div>
-                    <div className="grid gap-2 px-4 mt-2 mb-3">
-                      <Skeleton className="w-full h-8" />
-                      <Skeleton className="w-full h-12" />
-                    </div>
-                    <div className="flex space-x-2 px-4 mb-3">
-                      {Array.from({ length: 3 }).map((_, index) => (
-                        <Skeleton key={index} className="h-[25.6px] w-20" />
-                      ))}
-                    </div>
-                    <div className="flex space-x-2 px-4 pb-4">
-                      <Skeleton className="h-9 w-[103.43px]" />
-                      <Skeleton className="h-9 w-[94.51px]" />
+                    <div className="grid gap-y-2 px-4 mt-4">
+                      <div>
+                        <Skeleton className="h-6 w-[120px] rounded-md" />
+                      </div>
+                      <div className="grid gap-y-1">
+                        <Skeleton className="w-full h-8" />
+                        <Skeleton className="w-full h-12" />
+                      </div>
+                      <div className="pb-4">
+                        <Skeleton className="h-8 w-[111.63px]" />
+                      </div>
                     </div>
                   </Card>
                 ))
-              : allBlogs.map((blog, id) => (
+              : currentBlogs.map((blog, id) => (
                   <MagicCard
                     key={id}
                     className="grid rounded bg-background"
@@ -126,12 +138,12 @@ const Blogs = () => {
                         <h3 className="text-2xl font-playfairD font-bold line-clamp-1">
                           {blog.title}
                         </h3>
-                        <p className="font-lato text-lg text-foreground/70 line-clamp-2">
+                        <p className="font-lato text-base text-foreground/70 line-clamp-2 h-12">
                           {blog.description}
                         </p>
                       </div>
-                      <div className="flex space-x-2 pb-4">
-                        <Button className="shadow-none" size="sm">
+                      <div className="pb-4">
+                        <Button className="shadow-none" size="default">
                           <Link
                             className="inline-flex font-normal text-sm font-lato items-center text-background dark:text-foreground"
                             href={`blog/${blog.slug}`}>
@@ -143,6 +155,27 @@ const Blogs = () => {
                     </div>
                   </MagicCard>
                 ))}
+          </div>
+          <div className="flex justify-center mt-12 space-x-2">
+            <Button
+              size="sm"
+              disabled={currentPage === 1}
+              onClick={() => handlePageChange("prev")}>
+              <ChevronLeft className="w-4 h-4" />
+              Previous
+            </Button>
+            <Button
+              size="sm"
+              disabled={currentPage === totalPages}
+              onClick={() => handlePageChange("next")}>
+              Next
+              <ChevronRight className="w-4 h-4" />
+            </Button>
+          </div>
+          <div className="text-center mt-3">
+            <p className="text-muted-foreground/80 text-sm">
+              Page {currentPage} of {totalPages}
+            </p>
           </div>
         </div>
       </section>
