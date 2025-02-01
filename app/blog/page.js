@@ -93,7 +93,7 @@ const Blogs = () => {
                 </p>
               </div>
             </div>
-            <div className="mx-auto mt-8 grid max-w-screen-lg gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-8 grid max-w-screen-lg gap-4 md:grid-cols-2">
               {isLoading
                 ? Array.from({ length: itemsPerPage }).map((_, index) => (
                     <Card
@@ -107,8 +107,8 @@ const Blogs = () => {
                           <Skeleton className="h-6 w-[120px] rounded-md" />
                         </div>
                         <div className="grid gap-y-1">
-                          <Skeleton className="w-full h-8" />
-                          <Skeleton className="w-full h-12" />
+                          <Skeleton className="w-full h-14" />
+                          <Skeleton className="w-full h-[72px]" />
                         </div>
                         <div className="pb-4">
                           <Skeleton className="h-8 w-[111.63px]" />
@@ -144,10 +144,10 @@ const Blogs = () => {
                           ))}
                         </div>
                         <div className="grid gap-y-1">
-                          <h3 className="text-2xl font-playfairD font-bold line-clamp-1">
+                          <h3 className="text-xl font-playfairD font-bold line-clamp-2">
                             {blog.title}
                           </h3>
-                          <p className="font-lato text-base text-foreground/70 line-clamp-2 h-12">
+                          <p className="font-lato text-base text-foreground/70 line-clamp-3 h-[72px]">
                             {blog.description}
                           </p>
                         </div>
