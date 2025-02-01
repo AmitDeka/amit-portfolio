@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2">
             {navbarItems.map((item, index) => (
-              <Link
+              <a
                 key={index}
                 href={item.href}
                 className={cn(
@@ -65,11 +65,8 @@ const Navbar = () => {
                     variant: "ghost",
                   })
                 )}>
-                {/* {pathname === item.href && (
-                  <div className="h-2 w-2 rounded-full top-[43%] left-0 absolute bg-primary"></div>
-                )} */}
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
           <div className="flex items-center gap-1">
@@ -134,7 +131,7 @@ const Navbar = () => {
                   </SheetHeader>
                   <div className="mb-4 mt-4 flex flex-col gap-4">
                     {navbarItems.map((item, index) => (
-                      <Link
+                      <a
                         key={index}
                         className={cn(
                           "text-foreground/70 ps-4 text-base !justify-start",
@@ -144,7 +141,7 @@ const Navbar = () => {
                         )}
                         href={item.href}>
                         {item.name}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </SheetContent>

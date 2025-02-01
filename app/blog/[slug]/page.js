@@ -2,7 +2,6 @@ import SEO from "@/app/utils/seo";
 import { GraphQLClient, gql } from "graphql-request";
 import { ClockIcon, FolderOpen, PenSquare } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const endpoint =
   "https://ap-south-1.cdn.hygraph.com/content/cm56bxd7p035g07wepkz10imi/master";
@@ -87,7 +86,7 @@ async function BlogPost({ params }) {
                     <p>{blog.blogCategory[0].categoryName}</p>
                   </span>
                 </div>
-                <h1 className="text-3xl md:text-4xl text-center font-bold font-playfairD lg:text-5xl">
+                <h1 className="text-2xl md:text-3xl text-center font-bold font-playfairD lg:text-4xl">
                   {blog.title}
                 </h1>
                 <div className="max-w-10 mx-auto w-full mt-6">
@@ -95,11 +94,11 @@ async function BlogPost({ params }) {
                 </div>
               </div>
 
-              <p className="text-muted-foreground text-center font-lato text-lg">
+              <p className="text-muted-foreground text-center font-lato text-base lg:text-lg">
                 {blog.description}
               </p>
 
-              <div className="relative w-full h-[400px]">
+              <div className="relative w-full h-[250px] md:h-[350px] lg:h-[450px] ">
                 <Image
                   fill
                   style={{ objectFit: "cover", objectPosition: "top" }}
@@ -110,10 +109,11 @@ async function BlogPost({ params }) {
                 />
               </div>
 
-              <div
-                className="grid gap-y-3 prose prose-sm max-w-none"
-                dangerouslySetInnerHTML={{ __html: blog.content.html }}
-              />
+              <article
+                className="prose prose-base max-w-full dark:prose-invert mx-auto font-lato lg:prose-lg prose-code:text-sm sm:prose-code:text-base prose-zinc prose-a:text-primary prose-a:no-underline hover:prose-a:underline overflow-hidden"
+                dangerouslySetInnerHTML={{
+                  __html: blog.content.html,
+                }}></article>
             </div>
           </div>
         </section>

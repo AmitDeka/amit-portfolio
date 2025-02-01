@@ -5,11 +5,11 @@ import { MagicCard } from "./ui/magic-card";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
+import { cn } from "@/lib/utils";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -118,26 +118,32 @@ const Projects = () => {
                   </div>
                   <div className="flex space-x-2 px-4 pb-4">
                     {project.sourceCode && (
-                      <Button className="shadow-none">
-                        <Link
-                          className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                          href={project.sourceCode}
-                          target="_blank">
-                          <Github className="mr-1" />
-                          Source
-                        </Link>
-                      </Button>
+                      <a
+                        className={cn(
+                          "inline-flex font-normal font-lato items-center text-background dark:text-foreground !shadow-none",
+                          buttonVariants({
+                            variant: "default",
+                          })
+                        )}
+                        href={project.sourceCode}
+                        target="_blank">
+                        Source
+                        <Github className="mr-1" />
+                      </a>
                     )}
                     {project.websiteLink && (
-                      <Button className="shadow-none">
-                        <Link
-                          className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                          href={project.websiteLink}
-                          target="_blank">
-                          <Globe2 className="mr-1" />
-                          Website
-                        </Link>
-                      </Button>
+                      <a
+                        className={cn(
+                          "inline-flex font-normal font-lato items-center text-background dark:text-foreground !shadow-none",
+                          buttonVariants({
+                            variant: "default",
+                          })
+                        )}
+                        href={project.websiteLink}
+                        target="_blank">
+                        Website
+                        <Globe2 className="mr-1" />
+                      </a>
                     )}
                   </div>
                 </MagicCard>

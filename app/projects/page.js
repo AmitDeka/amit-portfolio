@@ -3,14 +3,14 @@ import { gql, GraphQLClient } from "graphql-request";
 import { Github, Globe2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { MagicCard } from "@/components/ui/magic-card";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import SEO from "../utils/seo";
+import { cn } from "@/lib/utils";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -128,26 +128,32 @@ const Projects = () => {
                       </div>
                       <div className="flex space-x-2 px-4 pb-4">
                         {project.sourceCode && (
-                          <Button className="shadow-none">
-                            <Link
-                              className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                              href={project.sourceCode}
-                              target="_blank">
-                              <Github className="mr-1" />
-                              Source
-                            </Link>
-                          </Button>
+                          <a
+                            className={cn(
+                              "inline-flex font-normal font-lato items-center text-background dark:text-foreground !shadow-none",
+                              buttonVariants({
+                                variant: "default",
+                              })
+                            )}
+                            href={project.sourceCode}
+                            target="_blank">
+                            Source
+                            <Github className="mr-1" />
+                          </a>
                         )}
                         {project.websiteLink && (
-                          <Button className="shadow-none">
-                            <Link
-                              className="inline-flex font-normal font-lato items-center text-background dark:text-foreground"
-                              href={project.websiteLink}
-                              target="_blank">
-                              <Globe2 className="mr-1" />
-                              Website
-                            </Link>
-                          </Button>
+                          <a
+                            className={cn(
+                              "inline-flex font-normal font-lato font-lato items-center text-background dark:text-foreground !shadow-none",
+                              buttonVariants({
+                                variant: "default",
+                              })
+                            )}
+                            href={project.websiteLink}
+                            target="_blank">
+                            Website
+                            <Globe2 className="mr-1" />
+                          </a>
                         )}
                       </div>
                     </MagicCard>

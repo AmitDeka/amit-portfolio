@@ -3,14 +3,14 @@ import { gql, GraphQLClient } from "graphql-request";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { MagicCard } from "@/components/ui/magic-card";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import SEO from "../utils/seo";
+import { cn } from "@/lib/utils";
 
 const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
@@ -152,14 +152,17 @@ const Blogs = () => {
                           </p>
                         </div>
                         <div className="pb-4">
-                          <Button className="shadow-none" size="default">
-                            <Link
-                              className="inline-flex font-normal text-sm font-lato items-center text-background dark:text-foreground"
-                              href={`blog/${blog.slug}`}>
-                              Read More
-                              <ArrowRight className="ml-1" />
-                            </Link>
-                          </Button>
+                          <a
+                            className={cn(
+                              "inline-flex font-normal text-sm shadow-none font-lato items-center text-background dark:text-foreground",
+                              buttonVariants({
+                                variant: "default",
+                              })
+                            )}
+                            href={`blog/${blog.slug}`}>
+                            Read More
+                            <ArrowRight className="ml-1" />
+                          </a>
                         </div>
                       </div>
                     </MagicCard>
