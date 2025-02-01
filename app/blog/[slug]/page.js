@@ -110,7 +110,7 @@ async function BlogPost({ params }) {
               </div>
 
               <article
-                className="prose prose-base max-w-full dark:prose-invert mx-auto font-lato lg:prose-lg prose-code:text-sm sm:prose-code:text-base prose-zinc prose-a:text-primary prose-a:no-underline hover:prose-a:underline overflow-hidden"
+                className="prose prose-base max-w-full dark:prose-invert mx-auto font-lato lg:prose-lg prose-code:text-sm sm:prose-code:text-base dark:prose-pre:bg-zinc-900 prose-zinc prose-a:text-primary prose-a:no-underline hover:prose-a:underline overflow-hidden"
                 dangerouslySetInnerHTML={{
                   __html: blog.content.html,
                 }}></article>
