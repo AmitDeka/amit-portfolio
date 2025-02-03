@@ -46,8 +46,8 @@ const Hero = () => {
               </Button>
               <Button variant="outline" size="icon">
                 <a
-                  href="/a.txt"
-                  download="a.txt"
+                  href="/Amit_Deka_CV.pdf"
+                  download="Amit_Deka_CV.pdf"
                   className="w-full h-full flex items-center justify-center">
                   <FileText className="!size-4" />
                 </a>
