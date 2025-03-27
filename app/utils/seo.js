@@ -12,6 +12,7 @@ function SEO({ title, keywords, description, image, slug }) {
       <meta name="creator" content="Amit Deka" />
       <meta name="publisher" content="Amit Deka" />
 
+      <link rel="canonical" href="https://amitdeka.work/"></link>
       {/* Open Graph Metadata */}
       <meta
         property="og:title"
