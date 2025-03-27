@@ -66,7 +66,7 @@ async function BlogPost({ params }) {
           <div className="container mx-auto px-4 max-w-screen-lg">
             <div className="grid gap-y-6">
               <div>
-                <div className="flex w-full justify-between max-w-96 mx-auto mb-4">
+                <div className="flex w-full justify-between max-w-md mx-auto mb-4">
                   <span className="text-sm hidden text-muted-foreground/80 md:inline-flex items-center space-x-[6px]">
                     <PenSquare className="w-4 h-4" />
                     <p>{blog.createdBy.name}</p>
