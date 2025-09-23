@@ -66,7 +66,7 @@ const Projects = () => {
                 <Card
                   key={index}
                   className="grid rounded bg-background shadow-none">
-                  <div className="w-full h-56 rounded overflow-hidden">
+                  <div className="w-full h-80 rounded overflow-hidden">
                     <Skeleton className="w-full h-full" />
                   </div>
                   <div className="grid gap-2 px-4 mt-2 mb-3">
@@ -89,7 +89,7 @@ const Projects = () => {
                   key={id}
                   className="grid rounded bg-background"
                   gradientColor={theme === "dark" ? "#e11d48c1" : "#e11d4890"}>
-                  <div className="relative w-full h-56 rounded overflow-hidden">
+                  <div className="relative w-full h-80 rounded overflow-hidden">
                     <Image
                       fill
                       style={{ objectFit: "cover", objectPosition: "top" }}
