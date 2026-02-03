@@ -89,7 +89,7 @@ const Navbar = () => {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" className="rounded-full">
-              <a href="/Amit_Deka_CV.pdf" download="Amit_Deka_CV.pdf">
+              <a href="/Amit_Deka_CV_3jan26.pdf" download="Amit_Deka_CV_3jan26.pdf">
                 <FileText className="size-4" />
               </a>
             </Button>
